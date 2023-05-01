@@ -39,3 +39,10 @@ function question(x?: string | number): void {
 //파라미터를 넣어도, 안넣어도 가능
 question(2);
 question(1);
+
+function 내함수(x: number | string) {
+  let array: number[] = [];
+  array[0] = x as number;
+}
+
+내함수(123);
