@@ -46,3 +46,30 @@ function 내함수(x: number | string) {
 }
 
 내함수(123);
+
+type Animal = string | number | undefined;
+
+let 동물: Animal = 123;
+
+type AnimalType = { name: string; age: number };
+let 동물2: AnimalType = { name: "kim", age: 20 };
+
+type Girlfriend = { name?: string };
+const 여친: Girlfriend = {
+  name: "엠버",
+};
+
+여친.name = "유라";
+
+type Name = string;
+type Age = number;
+type Person = Name | Age;
+
+type PositionX = { x: number };
+type PositionY = { y: number };
+
+// &연산자로 object타입 합치기
+type NewType = PositionX & PositionY; // {x:number, y:number}
+
+// Extend한 타입 사용해보기
+let position: NewType = { x: 10, y: 20 };
